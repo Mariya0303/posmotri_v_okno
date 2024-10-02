@@ -42,7 +42,6 @@ ol {
   align-content: center;
   justify-items: center;
   align-items: end;
-  inline-size: 1140px;
   margin: 133px 30px;
   grid-template-columns: 2fr 1fr;
   column-gap: 30px;
