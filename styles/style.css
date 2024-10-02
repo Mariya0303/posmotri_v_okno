@@ -39,6 +39,7 @@ ol {
 .content {
   display: grid;
   justify-content: center;
+  align-content: center;
   justify-items: center;
   align-items: end;
   inline-size: 1140px;
@@ -64,20 +65,12 @@ ol {
   row-gap: 26px;
 }
 .content__list {
-  position: relative;
   overflow-y: auto;
   scrollbar-width: none;
 }
-/*.content__list-item {
-  height: 107px;
-  width: 394px;
-}*/
 .content__list-item:not(:last-child) {
   margin-block-end: 32px;
 }
-/*.content__list-item:has(:focus-visible) {
-  border: 1px solid #fff;
-}*/
 .content__card-link {
   display: flex;
   text-decoration: none;
@@ -99,7 +92,6 @@ ol {
   flex-wrap: nowrap;
   justify-content: flex-end;
   width: 100%;
-
 }
 .content__video-card-thumbnail {
   height: 103px;
@@ -107,7 +99,6 @@ ol {
 }
 .content__video-card-description-container {
   width: 200px;
-
 }
 .content__video-card-description-container:hover {
   text-decoration: underline;
@@ -175,7 +166,7 @@ fieldset {
   border: none;
   width: fit-content;
 }
-.search-form__label { /*текстовое поле*/
+.search-form__label {
   display: flex;
   width: fit-content;
   appearance: none;
