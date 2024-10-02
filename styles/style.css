@@ -37,16 +37,15 @@ ol {
   list-style: none;
 }
 .content {
-  display: grid;
+  display: flex;
   justify-content: center;
   align-content: center;
-  justify-items: center;
-  align-items: end;
-  margin: 133px 30px;
-  grid-template-columns: 2fr 1fr;
+  align-items: flex-end;
+  margin: auto;
   column-gap: 30px;
   width: 1140px;
   height: 534px;
+  margin-top: 133px;
 }
 .search-form {
   display: flex;
