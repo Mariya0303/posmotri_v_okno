@@ -17,7 +17,6 @@ html {
   font-family: 'Fira Sans Condensed', sans-serif;
   font-size: 18px;
   background-color: #1b1919;
-  padding-top: 133px;
 }
 
 h1,
@@ -32,6 +31,7 @@ blockquote,
 fieldset {
   margin: 0;
   padding: 0;
+  border: none;
 }
 
 ul,
@@ -164,10 +164,6 @@ video {
   clip-path: inset(50%);
   white-space: nowrap;
 }
-fieldset {
-  border: none;
-  width: fit-content;
-}
 .search-form__label {
   display: flex;
   width: fit-content;
@@ -196,11 +192,10 @@ fieldset {
   text-decoration: underline;
 }
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
-  position: absolute;
   content: "";
   height: 15px;
   width: 15px;
-  margin: 1px;
+  margin: auto;
   background-color: #fff;
 }
 .search-form__pseudo-checkbox {
