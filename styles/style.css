@@ -46,7 +46,7 @@ ol {
   margin: auto;
   column-gap: 30px;
   width: 1140px;
-  height: 534px;
+  max-height: 534px;
 }
 .search-form {
   display: flex;
@@ -59,8 +59,8 @@ ol {
 }
 .content__details {
   display: flex;
-  height: 534px;
   width: 399px;
+  max-height: 534px;
   flex-wrap: nowrap;
   flex-direction: column;
   row-gap: 26px;
@@ -68,7 +68,6 @@ ol {
 .content__list {
   position: relative;
   overflow-y: auto;
-  scrollbar-width: none;
 }
 .content__list-item:not(:last-child) {
   margin-block-end: 32px;
@@ -79,15 +78,18 @@ ol {
   color: #fff;
   width: 100%;
 }
-.content__card-link_current {
-  background: #545050;
-}
-.content__card-link_current:focus {
+.content__card-link:focus {
   outline: none;
 }
-
-.content__card-link_current:has(:focus-visible) {
+.content__card-link:hover {
+  text-decoration: underline;
+}
+.content__card-link:focus-visible {
   border: 1px solid #fff;
+  padding: 1px;
+}
+.content__card-link_current {
+  background: #545050;
 }
 .content__video-card {
   display: flex;
@@ -98,12 +100,11 @@ ol {
 .content__video-card-thumbnail {
   height: 103px;
   flex-grow: 1;
+  object-fit: cover;
+  object-position: center;
 }
 .content__video-card-description-container {
   width: 200px;
-}
-.content__video-card-description-container:hover {
-  text-decoration: underline;
 }
 .content__video-card-title {
   text-transform: uppercase;
@@ -119,19 +120,23 @@ ol {
   overflow: hidden;
 }
 .content__video-card-description {
+  max-width: 200px;
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
   text-align: left;
 }
 .result__video-container {
+  display: flex;
   width: 711px;
   height: 386px;
   margin-bottom: 16px;
   position: relative;
+
 }
 video {
-  width: 100%;
+  width: 711px;
+  object-fit: cover;
 }
 .search-form__fieldset {
   display: grid;
@@ -145,6 +150,8 @@ video {
   text-align: left;
 }
 .title {
+  width: 260px;
+  height: 210px;
   font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
@@ -153,7 +160,7 @@ video {
   text-transform: uppercase;
 }
 .content__accent {
-  opacity: 0.5;
+  color: #545050;
 }
 .visually-hidden {
   position: absolute;
@@ -174,8 +181,12 @@ video {
   text-align: left;
   column-gap: 5px;
 }
+.search-form__label:hover .search-form__label-text {
+  text-decoration: underline;
+}
 .search-form__label:has(:focus-visible) {
-  border: 1px solid currentColor;
+  outline: 1px solid currentColor;
+  padding: 1px;
 }
 .search-form__checkbox-list {
   display: flex;
@@ -187,9 +198,6 @@ video {
   display: flex;
   justify-content: center;
   align-self: center;
-}
-.time_of_day:hover {
-  text-decoration: underline;
 }
 .search-form__checkbox:checked + .search-form__pseudo-checkbox::after {
   content: "";
@@ -207,13 +215,17 @@ video {
   border: 1px solid #fff; 
   cursor: pointer;
 }
-.search-form__label:focus {
-  border: 1px solid #fff;
-}
 .button {
   cursor: pointer;
   background-color: transparent;
   border: 1px solid currentColor;
+  font-family: Fira Sans Condensed, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 21.6px;
+  text-align: center;
+  color: #fff;
+  height: 34px;
 }
 .button:active {
   background: #545050;
@@ -221,25 +233,18 @@ video {
 .button:hover {
   text-decoration: underline;
 }
+.button:focus {
+  outline: none;
+}
+.button:focus-visible {
+  outline: 1px solid #fff;
+  padding: 1px;
+}
 .search-form__submit-button {
   width: 194px;
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 21.6px;
-  text-align: center;
-  color: #fff;
-  height: 34px;
 }
 .more-button {
   width: 100%;
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
-  font-weight: 700;
-  line-height: 21.6px;
-  text-align: center;
-  color: #fff;
-  height: 34px;
 }
 input {
   background-color: transparent;
@@ -248,9 +253,15 @@ input {
   border-left: 0;
   border-right: 0;
   width: 225px;
-  font-family: Fira Sans Condensed;
+  font-family: Fira Sans Condensed, sans-serif;
   font-size: 18px;
   font-weight: 400;
   line-height: 21.6px;
   text-align: left;
  }
+ input:focus {
+  outline: none;
+ }
+.search-form__textfield {
+  color: #FFFFFFB2;
+}
