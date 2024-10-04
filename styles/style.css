@@ -46,7 +46,6 @@ ol {
   margin: auto;
   column-gap: 30px;
   width: 1140px;
-  max-height: 534px;
 }
 .search-form {
   display: flex;
@@ -55,12 +54,11 @@ ol {
   align-items: flex-end;
   column-gap: 40px;
   width: 711px;
-  margin-top: 16px;
+  height: 54px;
 }
 .content__details {
   display: flex;
   width: 399px;
-  max-height: 534px;
   flex-wrap: nowrap;
   flex-direction: column;
   row-gap: 26px;
@@ -68,6 +66,7 @@ ol {
 .content__list {
   position: relative;
   overflow-y: auto;
+  height: 298px;
 }
 .content__list-item:not(:last-child) {
   margin-block-end: 32px;
@@ -91,6 +90,9 @@ ol {
 .content__card-link_current {
   background: #545050;
 }
+.content__card-link:active {
+  background: #545050;
+}
 .content__video-card {
   display: flex;
   flex-wrap: nowrap;
@@ -99,11 +101,12 @@ ol {
 }
 .content__video-card-thumbnail {
   height: 103px;
-  flex-grow: 1;
+  width: 194px;
   object-fit: cover;
   object-position: center;
 }
 .content__video-card-description-container {
+  flex-grow: 1;
   width: 200px;
 }
 .content__video-card-title {
@@ -118,9 +121,10 @@ ol {
   padding-top: 3px;
   white-space: nowrap;
   overflow: hidden;
+  max-width: 195px;
 }
 .content__video-card-description {
-  max-width: 200px;
+  max-width: 195px;
   font-size: 18px;
   font-weight: 400;
   line-height: 16.2px;
@@ -132,15 +136,15 @@ ol {
   height: 386px;
   margin-bottom: 16px;
   position: relative;
-
 }
 video {
-  width: 711px;
+  width: 100%;
   object-fit: cover;
 }
 .search-form__fieldset {
   display: grid;
   width: fit-content;
+  align-items: start;
   row-gap: 5px;
 }
 .search-form__fieldset-title {
@@ -151,13 +155,13 @@ video {
 }
 .title {
   width: 260px;
-  height: 210px;
   font-family: Oswald, sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 70.5px;
   text-align: left;
   text-transform: uppercase;
+  margin-top: 0px;
 }
 .content__accent {
   color: #545050;
@@ -193,6 +197,7 @@ video {
   flex-direction: row;
   align-items: center;
   column-gap: 15px;
+  margin-bottom: 5px;
 }
 .search-form__checkbox {
   display: flex;
@@ -263,5 +268,5 @@ input {
   outline: none;
  }
 .search-form__textfield {
-  color: #FFFFFFB2;
+  color: #FFF;
 }
